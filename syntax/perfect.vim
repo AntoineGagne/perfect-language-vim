@@ -1,6 +1,12 @@
-" quit if syntax is already defined
-if exists("b:current_syntax")
-    finish
+" Perfect syntax file
+" Language: Perfect
+" Maintainer: Antoine Gagné <antoine.gagne.2@ulaval.ca>
+" Last Change: Mar 30 2018
+
+if version < 600
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
 endif
 
 " keywords
