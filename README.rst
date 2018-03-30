@@ -10,6 +10,10 @@ perfect-language-vim
 
 .. sectnum::
 
+This repository contains code that will make ``vim`` or ``neovim`` detect and
+highlight the syntax of the `Perfect language
+<http://www.eschertech.com/product_documentation/Language%20Reference/LanguageReferenceManual.html>`_.
+
 Installation
 ============
 
