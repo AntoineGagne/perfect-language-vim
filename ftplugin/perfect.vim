@@ -1,3 +1,6 @@
+setlocal makeprg=pdtool\ %
+setlocal errorformat=%f\ (%l\\,%c)%m
+
 setlocal commentstring=//\ %s
 
 setlocal foldmethod=syntax
