@@ -1,4 +1,4 @@
-setlocal makeprg=pdtool\ %
+setlocal makeprg=eschertool\ -vpd=build\ -vud=build\ -sb=/opt/escher/verificationstudio6/builtin/builtin.pdc\ -sr=/opt/escher/verificationstudio6/builtin/rubric.pdc\ %
 setlocal errorformat=%f\ (%l\\,%c)%m
 
 setlocal commentstring=//\ %s
