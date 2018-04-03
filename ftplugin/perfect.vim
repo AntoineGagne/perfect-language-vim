@@ -1,4 +1,16 @@
-setlocal makeprg=eschertool\ -vpd=build\ -vud=build\ -sb=/opt/escher/verificationstudio6/builtin/builtin.pdc\ -sr=/opt/escher/verificationstudio6/builtin/rubric.pdc\ %
+if !exists('g:perfect_builtin_file_path')
+    let g:perfect_builtin_file_path = '/opt/escher/verificationstudio6/builtin/builtin.pdc'
+endif
+
+if !exists('g:perfect_prover_rule_declaration_file_path')
+    let g:perfect_prover_rule_declaration_file_path = '/opt/escher/verificationstudio6/builtin/rubric.pdc'
+endif
+
+if !exists('g:perfect_build_output_directory')
+    let g:perfect_build_output_directory = 'build'
+endif
+
+let &makeprg="eschertool -vpd=" . g:perfect_build_output_directory . " -vud=" . g:perfect_build_output_directory . " -sb=" . g:perfect_builtin_file_path . " -sr=" . g:perfect_prover_rule_declaration_file_path . " %"
 setlocal errorformat=%f\ (%l\\,%c)%m
 
 setlocal commentstring=//\ %s
