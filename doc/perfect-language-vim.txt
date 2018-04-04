@@ -1,0 +1,99 @@
+*perfect-language-vim.txt*   Filetype plugin for the Perfect language by Escher Technologies.
+*perfect-language-vim*
+
+
+                              Reference Manual~
+
+
+==============================================================================
+CONTENTS                                                  *perfect-language-vim-contents*
+
+    1.Intro........................................|perfect-language-vim-intro|
+        1.1.Quick start............................|perfect-language-vim-quickstart|
+    2.Functionality provided.......................|perfect-language-vim-functionality|
+        2.1.Compiling, verifying, checking.........|perfect-language-vim-compilation|
+    3.Commands.....................................|perfect-language-vim-commands|
+    4.Global Options...............................|perfect-language-vim-global-options|
+    5.About........................................|perfect-language-vim-about|
+    6.License......................................|perfect-language-vim-license|
+
+
+==============================================================================
+1. Intro                                          *perfect-language-vim-intro*
+
+perfect-language-vim is a filetype plugin for the Perfect language by Escher
+Technologies. It defines syntax highlighting rules along with commands to help
+with working with the language.
+
+------------------------------------------------------------------------------
+1.1. Quick start                             *perfect-language-vim-quickstart*
+
+This plugin comes with default configuration for some of the |makeprg| command
+flags. You can view these configurable options in the
+|perfect-language-vim-global-options| section.
+
+==============================================================================
+2. Functionality provided                 *perfect-language-vim-functionality*
+
+This plugin offers the following features:
+
+    * Syntax highlighting
+    * Compilation, verification and checks
+
+------------------------------------------------------------------------------
+2.1. Compiling, verifying, checking           *perfect-language-vim-compilation*
+
+This plugin overrides the |makeprg| option to use the `eschertool` program
+instead of the default one.
+
+This program will compile, verify and check the current file the same way
+`verificationstudio` would.
+
+==============================================================================
+3. Commands                                    *perfect-language-vim-commands*
+
+:make                                                              *:make*
+
+Since this plugin overrides |makeprg|, you can use the |:make| command.
+
+Example: >
+    :make
+<
+==============================================================================
+4. Global Options                       *perfect-language-vim-global-options*
+
+                                               *'perfect_build_output_directory'*
+Type: string
+Default: "build"
+Use this option to specify the output directory: >
+    let g:perfect_build_output_directory = 'somedirectoryname'
+<
+                                                *'perfect_builtin_file_path'*
+Type: string
+Default: "/opt/escher/verificationstudio6/builtin/builtin.pdc"
+Use this option to specify the path of the builtins declarations file: >
+    let g:perfect_builtin_file_path = '/some/path/builtin.pdc'
+<
+                                                *'perfect_prover_rule_declaration_file_path'*
+Type: string
+Default: "/opt/escher/verificationstudio6/builtin/rubric.pdc"
+Use this option to specify where the prover rules declarations can be found: >
+    let g:perfect_prover_rule_declaration_file_path = /some/path/rubric.pdc
+<
+==============================================================================
+8. About                                          *perfect-language-vim-about*
+
+The core maintainers of perfect-language-vim are:
+    Antoine Gagné (GitHub: AntoineGagne)
+
+Find the latest version of perfect-language-vim at:
+
+    https://github.com/AntoineGagne/perfect-language-vim
+
+==============================================================================
+9. License                                       *perfect-language-vim-license*
+
+perfect-language-vim is released under the MIT license.
+See https://mit-license.org/.
+
+ vim:tw=78:sw=4:ft=help:norl:
