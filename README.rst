@@ -17,14 +17,21 @@ highlight the syntax of the `Perfect language
 Requirements
 ============
 
+The following are required for all the features to work correctly:
+
+* A working Vim or Neovim installation with the syntax highlighting feature
+  compiled
+* The software to work with the Perfect language by Escher Technologies. This
+  should normally provide an ``eschertool`` program.
+
 Although the syntax highlighting will work on every platforms that
 have Vim or Neovim compiled with the syntax highlighting feature, it is not
 true of the ``:make`` command which depends on the availability of the
 ``eschertool`` command.
 
 Even though the ``eschertool`` command comes with the Linux version, as I have
-no machines with Windows or OSX, I can't tell whether this executable comes
-with the installer on these OS.
+no machines with Windows, I can't tell whether this executable comes
+with the installer on this OS.
 However, assuming that the command is available and in your ``PATH``, then it
 should work correctly when invoking the command ``:make`` from Vim or Neovim.
 
@@ -33,6 +40,9 @@ by the installer and you can change the plugin variables
 ``g:perfect_builtin_file_path`` and
 ``g:perfect_prover_rule_declaration_file_path`` to their respective paths
 according to the location of the previous files.
+
+You can learn more about the ``eschertool`` command `here
+<https://www.eschertech.com/product_documentation/User%20Guide/UserGuide.html#6.Command_syntax>`_.
 
 Installation
 ============
@@ -119,4 +129,4 @@ For the basic syntax highlighting, any OS that can run Vim or Neovim will work.
 
 For the compilation, verification and checks, you will need an OS on which
 ``eschertool`` can be installed (the Linux version is supported but I haven't
-tested on OSX and Windows).
+tested on Windows).
