@@ -14,6 +14,26 @@ This repository contains code that will make ``vim`` or ``neovim`` detect and
 highlight the syntax of the `Perfect language
 <http://www.eschertech.com/product_documentation/Language%20Reference/LanguageReferenceManual.html>`_.
 
+Requirements
+============
+
+Although the syntax highlighting will work on every platforms that
+have Vim or Neovim compiled with the syntax highlighting feature, it is not
+true of the ``:make`` command which depends on the availability of the
+``eschertool`` command.
+
+Even though the ``eschertool`` command comes with the Linux version, as I have
+no machines with Windows or OSX, I can't tell whether this executable comes
+with the installer on these OS.
+However, assuming that the command is available and in your ``PATH``, then it
+should work correctly when invoking the command ``:make`` from Vim or Neovim.
+
+If it doesn't, check where the ``builtin.pdc`` and ``rubric.pdc`` were placed
+by the installer and you can change the plugin variables
+``g:perfect_builtin_file_path`` and
+``g:perfect_prover_rule_declaration_file_path`` to their respective paths
+according to the location of the previous files.
+
 Installation
 ============
 
@@ -21,23 +41,36 @@ The installation will differ according to the plugin manager you use (or if you
 don't use one).
 This section contains the instructions for some of them.
 
+.. note:: This is only for some plugin managers but this plugin should work
+   with any plugin manager.
+   If you don't use any, it should work with Vim or Neovim built-in plugin
+   management system given that it is correctly installed.
+
 vim-plug
 --------
 
-You can place this in your ``.vimrc``:
+If you use `vim-plug <https://github.com/junegunn/vim-plug>`_ (see this link
+for how to install it), you can place this in your ``.vimrc``:
 
 .. code-block:: vim
 
     Plug 'AntoineGagne/perfect-language-vim'
 
+After adding this line, you can launch ``vim`` and run ``:PlugInstall``.
+The plugin will then be used when opening files with ``.pd`` extensions.
+
 Vundle
 ------
 
-You can place this in your ``.vimrc``:
+If you use `Vundle <https://github.com/VundleVim/Vundle.vim>`_ (see this link
+for how to install it), you can place this in your ``.vimrc``:
 
 .. code-block:: vim
 
     Plugin 'AntoineGagne/perfect-language-vim'
+
+After adding this line, you can launch ``vim`` and run ``:PluginInstall``.
+The plugin will then be used when opening files with ``.pd`` extensions.
 
 Usage
 =====
@@ -46,10 +79,10 @@ Compiling, Verifying and Checking
 ---------------------------------
 
 This plugin sets the ``makeprg`` variable.
-This means you can simply use ``:make`` and it will automatically build, verify
-and check the current file.
-This also means that you can use the QuickFix list to quickly jump to errors
-thrown at the compilation.
+This means you can simply use ``:make`` when editing a Perfect file and it will
+automatically build, verify and check the current file.
+This also means that you can use the QuickFix list (see ``:help quickfix.txt``
+for more information) to quickly jump to errors thrown at the compilation.
 
 Build Directory
 ~~~~~~~~~~~~~~~
@@ -72,3 +105,9 @@ This plugin uses ``/opt/escher/verificationstudio6/builtin/rubric.pdc`` as the
 default file path to the prover rules declaration.
 You can configure this with the ``g:perfect_prover_rule_declaration_file_path``
 variable.
+
+Documentation
+=============
+
+This plugin comes with vimdoc that you can access with the command ``:help
+perfect-language-vim.txt``.
