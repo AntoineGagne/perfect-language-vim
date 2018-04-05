@@ -84,27 +84,23 @@ automatically build, verify and check the current file.
 This also means that you can use the QuickFix list (see ``:help quickfix.txt``
 for more information) to quickly jump to errors thrown at the compilation.
 
-Build Directory
-~~~~~~~~~~~~~~~
-
 By default, the output of these checks will be in the ``build`` folder.
 You can configure this by setting the value of the variable
 ``g:perfect_build_output_directory``.
 
-Builtin Declarations File
-~~~~~~~~~~~~~~~~~~~~~~~
+Global Options
+==============
 
-This plugin uses ``/opt/escher/verificationstudio6/builtin/builtin.pdc`` as the
-default file path to the *builtin* declarations.
-You can configure this with the ``g:perfect_builtin_file_path`` variable.
+.. table:: Available global options
+   :widths: auto
 
-Prover Rules Declarations File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This plugin uses ``/opt/escher/verificationstudio6/builtin/rubric.pdc`` as the
-default file path to the prover rules declaration.
-You can configure this with the ``g:perfect_prover_rule_declaration_file_path``
-variable.
+    =============================================== ===================================================== ====== =====================================================================
+               Flag                                                    Default                             Type                         Description
+    =============================================== ===================================================== ====== =====================================================================
+    ``g:perfect_build_output_directory``                               "build"                            string Path where the checks will be outputted to
+    ``g:perfect_builtin_file_path``                 "/opt/escher/verificationstudio6/builtin/builtin.pdc" string Path to where the file that contains the *builtin* declarations is
+    ``g:perfect_prover_rule_declaration_file_path`` "/opt/escher/verificationstudio6/builtin/rubric.pdc"  string Path to where the file that contains the prover rules declarations is
+    =============================================== ===================================================== ====== =====================================================================
 
 Documentation
 =============
