@@ -100,13 +100,13 @@ You can configure this by setting the value of the variable
 
 :Example:
 
-Assuming we are editing a ``.pd`` file, this command
+Here is a recorded sample session of how to use this plugin:
 
-.. code-block:: vim
+.. image:: https://asciinema.org/a/rGDZXEqoP89FKDpHffgt3PQzG.png
+   :target: https://asciinema.org/a/rGDZXEqoP89FKDpHffgt3PQzG
 
-    :make
-
-will compile, verify and check the current file.
+It illustrates the syntax highlighting offered by the plugin and how to use the
+``:make`` command along with the ``quickfix`` window.
 
 Global Options
 ==============
