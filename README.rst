@@ -98,6 +98,16 @@ By default, the output of these checks will be in the ``build`` folder.
 You can configure this by setting the value of the variable
 ``g:perfect_build_output_directory``.
 
+:Example:
+
+Assuming we are editing a ``.pd`` file, this command
+
+.. code-block:: vim
+
+    :make
+
+will compile, verify and check the current file.
+
 Global Options
 ==============
 
