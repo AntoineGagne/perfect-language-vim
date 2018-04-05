@@ -19,8 +19,8 @@ Requirements
 
 The following are required for all the features to work correctly:
 
-* A working Vim or Neovim installation with the syntax highlighting feature
-  compiled
+* A working Vim or Neovim installation compiled with the syntax highlighting
+  feature
 * The software to work with the Perfect language by Escher Technologies. This
   should normally provide an ``eschertool`` program.
 
