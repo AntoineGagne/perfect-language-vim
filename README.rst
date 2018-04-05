@@ -108,3 +108,15 @@ Documentation
 
 This plugin comes with vimdoc that you can access with the command ``:help
 perfect-language-vim.txt``.
+
+FAQ
+===
+
+Which operating systems does this plugin support?
+-------------------------------------------------
+
+For the basic syntax highlighting, any OS that can run Vim or Neovim will work.
+
+For the compilation, verification and checks, you will need an OS on which
+``eschertool`` can be installed (the Linux version is supported but I haven't
+tested on OSX and Windows).
