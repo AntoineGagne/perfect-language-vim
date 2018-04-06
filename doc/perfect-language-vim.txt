@@ -80,6 +80,12 @@ Default: "/opt/escher/verificationstudio6/builtin/rubric.pdc"
 Use this option to specify where the prover rules declarations can be found: >
     let g:perfect_prover_rule_declaration_file_path = /some/path/rubric.pdc
 <
+                                               *'perfect_template_author'*
+Type: string
+Default: "<Author name here>"
+Use this option to specify the name of the author when creating a new file: >
+    let g:perfect_template_author = 'John Smith'
+<
 ==============================================================================
 5. About                                          *perfect-language-vim-about*
 
