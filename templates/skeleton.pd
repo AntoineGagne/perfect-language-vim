@@ -1,0 +1,14 @@
+// *******************************************************
+// * File: [:VIM_EVAL:]bufname('%')[:END_EVAL:]
+// * Author: [:VIM_EVAL:]g:perfect_template_author[:END_EVAL:]
+// * Created: [:VIM_EVAL:]strftime('%c', localtime())[:END_EVAL:]
+// *******************************************************
+
+class [:VIM_EVAL:]expand('%:t:r')[:END_EVAL:] ^=
+    abstract
+        // Add variables, invariants and private method declarations here
+    interface
+        // Add public access function, selector and method declarations here
+        build{}
+            post ?;
+end;
