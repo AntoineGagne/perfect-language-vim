@@ -16,8 +16,7 @@ endif
 
 let g:perfect_plugin_directory = expand('<sfile>:p:h:h')
 
-let &makeprg="eschertool -vpd=" . g:perfect_build_output_directory . " -vud=" . g:perfect_build_output_directory . " -sb=" . g:perfect_builtin_file_path . " -sr=" . g:perfect_prover_rule_declaration_file_path . " %"
-setlocal errorformat=%f\ (%l\\,%c)%m
+compiler perfect
 
 setlocal commentstring=//\ %s
 
