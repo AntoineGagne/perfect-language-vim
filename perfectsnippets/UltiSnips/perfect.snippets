@@ -1,0 +1,37 @@
+snippet taggedclass "Tag Generator"
+class ${1:Identifier} ^= tag${0};
+endsnippet
+
+snippet enum "Enumeration"
+class ${1:Identifier} ^= enum
+	${0:VISUAL};
+end;
+endsnippet
+
+snippet class "Class"
+class ${1:Identifier} ^=
+	abstract
+		${1}
+
+	interface
+		${2}
+endsnippet
+
+snippet variables "Variable block"
+var
+	${1}
+endsnippet
+
+snippet constants "Constants block"
+const
+	${1}
+endsnippet
+
+snippet schema "Schema"
+schema
+	pre
+		${1}
+
+	post
+		${2}
+endsnippet

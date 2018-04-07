@@ -15,6 +15,7 @@ if !exists('g:perfect_template_author')
 endif
 
 let g:perfect_plugin_directory = expand('<sfile>:p:h:h')
+execute 'set rtp+=' . expand(g:perfect_plugin_directory) . '/perfectsnippets'
 
 compiler perfect
 
