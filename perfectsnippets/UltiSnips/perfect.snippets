@@ -4,7 +4,7 @@ endsnippet
 
 snippet enum "Enumeration"
 class ${1:Identifier} ^= enum
-	${0:VISUAL};
+	${0:VISUAL}
 end;
 endsnippet
 
@@ -29,10 +29,10 @@ const
 endsnippet
 
 snippet schema "Schema"
-schema
+schema ${1}
 	pre
-		${1}
+		${2}
 
 	post
-		${2}
+		${3};
 endsnippet
